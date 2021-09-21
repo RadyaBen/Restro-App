@@ -24,4 +24,3 @@ const mapStateToProps = ({ totalPrice }) => {
 }
 
 export default connect(mapStateToProps)(AppHeader);
-
