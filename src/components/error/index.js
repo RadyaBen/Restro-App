@@ -1,3 +1,3 @@
 import Error from './error';
 
-export default Error;
+export { Error };
