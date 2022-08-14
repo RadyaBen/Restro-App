@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/app';
+import App from './pages/app';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import ErrorBoundary from './components/error-boundry';
 import RestoService from './services/resto-service';
 import RestoServiceContext from './components/resto-service-context';
-import store from './store';
+import store from './redux/store/store';
 
 import './index.scss';
 

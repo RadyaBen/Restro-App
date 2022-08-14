@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import WithRestoService from '../hoc/';
-import Spinner from '../spinner';
-import Error from '../error';
-import { menuLoaded, menuRequested, menuError, addedToCart } from '../../actions';
 
-import './itemPage.css';
+import WithRestoService from '../../components/hoc';
+import Spinner from '../../components/spinner';
+import Error from '../../components/error';
+import { menuLoaded, menuRequested, menuError, addedToCart } from '../../redux/actions/menu';
 
-
+import './item-page.css';
 
 class ItemPage extends Component {
 
