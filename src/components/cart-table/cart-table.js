@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {deleteFromCart} from '../../actions';
+import {deleteFromCart} from '../../redux/actions/menu';
 import WithRestoService from '../hoc';
 
 import './cart-table.scss';
