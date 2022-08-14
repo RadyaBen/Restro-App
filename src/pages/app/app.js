@@ -1,9 +1,9 @@
-import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+
 import { MainPage, CartPage, ItemPage } from '../index';
-import AppHeader from '../../components/app-header';
+import { AppHeader } from '../../components/app-header';
 
 import Background from './food-bg.jpg';
-import { Route, Switch } from 'react-router-dom';
 
 const App = () => {
 

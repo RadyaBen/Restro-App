@@ -1,6 +1,6 @@
 import { createStore } from 'redux';
 
-import menuReducer from '../reducers/menu';
+import { menuReducer } from '../reducers';
 
 const store = createStore(menuReducer);
 

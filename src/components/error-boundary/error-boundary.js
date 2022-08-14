@@ -1,7 +1,8 @@
-import React, {Component} from 'react';
-import Error from '../error';
+import { Component } from 'react';
 
-export default class ErrorBoundry extends Component {
+import { Error } from '../error';
+
+class ErrorBoundary extends Component {
 
     state = {
         error: false
@@ -18,3 +19,5 @@ export default class ErrorBoundry extends Component {
         return this.props.children;
     }
 }
+
+export default ErrorBoundary;

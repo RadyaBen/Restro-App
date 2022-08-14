@@ -1,8 +1,8 @@
-import React from 'react';
-import cartIcon from './shopping-cart-solid.svg';
-import './app-header.scss';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+
+import cartIcon from './shopping-cart-solid.svg';
+import './app-header.scss';
 
 const AppHeader = ({ totalPrice }) => {
 

@@ -1,5 +1,4 @@
-import React from 'react';
-import RestoServiceContext from '../resto-service-context';
+import { RestoServiceContext } from '../resto-service-context';
 
 const WithRestoService = () => (Wrapped) => {
     return (props) => {

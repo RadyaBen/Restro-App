@@ -1,4 +1,4 @@
-export default class RestoService {
+class RestoService {
 	_apiBase = 'http://localhost:8000';
 
 	async getResource(url) {
@@ -50,3 +50,5 @@ export default class RestoService {
 		return orderNumber
 	}
 }
+
+export default RestoService;
