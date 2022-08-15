@@ -1,9 +1,9 @@
 import MainPage from './main-page/main-page';
-import CartPage from './cart-page/cart-page'; 
-import ItemPage from './item-page/item-page'; 
+import CartPage from './cart-page/cart-page';
+import ItemPage from './item-page/item-page';
 
-export { 
+export {
 	MainPage,
 	CartPage,
-	ItemPage
+	ItemPage,
 };

@@ -5,11 +5,11 @@ import { Error } from '../error';
 class ErrorBoundary extends Component {
 
     state = {
-        error: false
-    }
+        error: false,
+    };
 
     componentDidCatch() {
-        this.setState({ error: true })
+        this.setState({ error: true });
     }
     render() {
         if (this.state.error) {
