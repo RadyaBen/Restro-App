@@ -22,12 +22,11 @@ class MenuList extends Component {
     render() {
         const { menuItems, loading, error, addedToCart } = this.props;
         if (error) {
-            return <Error />
+            return <Error />;
         }
         if (loading) {
-            return <Spinner />
+            return <Spinner />;
         }
-
 
         const items = menuItems.map(menuItem => {
             return (
@@ -35,38 +34,38 @@ class MenuList extends Component {
                     key={menuItem.id}
                     menuItem={menuItem}
                     onAddToCart={() => addedToCart(menuItem.id)} />
-            )
-        })
+            );
+        });
 
         return (
             <View items={items} />
-        )
+        );
 
     }
-};
+}
 
 const mapStateToProps = (state) => {
     return {
         menuItems: state.menu, // MenuItems has our initialState
         loading: state.loading,
-        error: state.error
-    }
-}
+        error: state.error,
+    };
+};
 
 const mapDispatchToProps = {
     menuLoaded,
     menuRequested,
     menuError,
-    addedToCart
+    addedToCart,
 };
 
 const View = ({ items }) => {
 
     return (
-        <ul className="menu__list">
+        <ul className='menu__list'>
             {items}
         </ul>
-    )
-}
+    );
+};
 
 export default WithRestoService()(connect(mapStateToProps, mapDispatchToProps)(MenuList));

@@ -3,8 +3,8 @@ const initialState = {
 	loading: true,
 	error: false,
 	items: [],
-	totalPrice: 0
-}
+	totalPrice: 0,
+};
 
 const menuReducer = (state = initialState, action) => {
 	switch (action.type) {
@@ -13,20 +13,20 @@ const menuReducer = (state = initialState, action) => {
 				...state,
 				menu: action.payload,
 				loading: false,
-				error: false
+				error: false,
 			};
 		case 'MENU_REQUESTED':
 			return {
 				...state,
 				menu: state.menu,
 				loading: true,
-				error: false
+				error: false,
 			};
 		case 'MENU_ERROR':
 			return {
 				...state,
 				menu: state.menu,
-				error: true
+				error: true,
 			};
 		case 'ITEM_ADD_TO_CART':
 			const id = action.payload;
@@ -36,17 +36,17 @@ const menuReducer = (state = initialState, action) => {
 				const itemInState = state.items.find(item => item.id === id);
 				const newItem = {
 					...itemInState,
-					qtty: ++itemInState.qtty
-				}
+					qtty: ++itemInState.qtty,
+				};
 				return {
 					...state,
 					items: [
 						...state.items.slice(0, itemInd),
 						newItem,
-						...state.items.slice(itemInd + 1)
+						...state.items.slice(itemInd + 1),
 					],
-					totalPrice: state.totalPrice + newItem.price
-				}
+					totalPrice: state.totalPrice + newItem.price,
+				};
 			}
 			// The item wasn't in the cart before
 			const item = state.menu.find(item => item.id === id);
@@ -55,33 +55,33 @@ const menuReducer = (state = initialState, action) => {
 				price: item.price,
 				url: item.url,
 				id: item.id,
-				qtty: 1
+				qtty: 1,
 			};
 
 			return {
 				...state,
 				items: [
 					...state.items,
-					newItem
+					newItem,
 				],
-				totalPrice: state.totalPrice + newItem.price
+				totalPrice: state.totalPrice + newItem.price,
 			};
 
 		case 'ITEM_REMOVE_FROM_CART':
 			const idx = action.payload;
-			const itemIndex = state.items.findIndex(item => item.id === idx)
+			const itemIndex = state.items.findIndex(item => item.id === idx);
 			const price = state.items[itemIndex]['price'] * state.items[itemIndex]['qtty'];
 			return {
 				...state,
 				items: [
 					...state.items.slice(0, itemIndex),
-					...state.items.slice(itemIndex + 1)
+					...state.items.slice(itemIndex + 1),
 				],
-				totalPrice: state.totalPrice - price
-			}
+				totalPrice: state.totalPrice - price,
+			};
 		default:
 			return state;
 	}
-}
+};
 
 export default menuReducer;
