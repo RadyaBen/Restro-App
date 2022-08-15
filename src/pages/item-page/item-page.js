@@ -6,7 +6,7 @@ import { WithRestoService } from '../../components/hoc';
 import { Spinner } from '../../components/spinner';
 import { Error } from '../../components/error';
 
-import './item-page.css';
+import './item-page.scss';
 
 class ItemPage extends Component {
 
