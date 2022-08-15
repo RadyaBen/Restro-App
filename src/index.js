@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
-import { store } from './redux/store';
+import { store } from './redux/helpers';
 import { RestoServiceContext } from './components/resto-service-context';
 import { RestoService } from './services';
 import { App } from './pages/app';
