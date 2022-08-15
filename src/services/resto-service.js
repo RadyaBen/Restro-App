@@ -1,5 +1,5 @@
 class RestoService {
-	_apiBase = 'http://localhost:8000';
+	_apiBase = 'https://react-restro-app.herokuapp.com/api';
 
 	async getResource(url) {
 		const res = await fetch(`${this._apiBase}${url}`);
